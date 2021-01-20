@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head >
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Demo Website</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Custom styles for this template -->
+<link href="/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+<div class="page-top"
+		style="width: 100%; height: 20px; background-color: #f46b42"></div>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Logo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav navbar-left">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="${pageContext.request.contextPath}/Menu">Takeaway Menu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+      
+      <!--  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      -->
+   <!-- search field -->
+       <form class = "navbar-form">
+      	<div class="form-group">
+      	<input type="text" name="keyword" class="form-control" placeholder="Menu item"/>
+      	</div>
+      	<button type="submit"  class="btn btn-default">Search</button>
+      </form>
+      
+    </ul> 
+    
+    <ul class="nav navbar-right">
+    	<li><a href="#">SHOPPING CART |</a></li>
+    	<li><a href="#"> MY ACCOUNT |</a></li>
+    	<li><a href="#"> LOG OUT</a></li>
+    </ul>   
+    
+  </div>
+</nav>
+
+
+
+	<div class="container box">
+		<div class="row">
+		
+		<!-- carousel -->
+			<div class="col-xs-8">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>
+					
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+						 <img alt="" src="/images/curry.PNG">
+						
+							<svg class="bd-placeholder-img" width="100%" height="100%"
+								xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false"
+								role="img">
+								<rect width="100%" height="100%" fill="#777" /></svg>
+							<div class="container">
+								<div class="carousel-caption text-left">
+									<h1>Example headline.</h1>
+									<p>Hello</p>
+									<p>
+										<a class="btn btn-lg btn-primary" href="#" role="button">Sign
+											up today</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="carousel-item">
+						<img alt="" src="/images/interior.PNG">
+						
+							<svg class="bd-placeholder-img" width="100%" height="100%"
+								xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false"
+								role="img">
+								<rect width="100%" height="100%" fill="#777" /></svg>
+							<div class="container">
+								<div class="carousel-caption">
+									<h1>Another example headline.</h1>
+									<p>Hello</p>
+									<p>
+										<a class="btn btn-lg btn-primary" href="#" role="button">Learn
+											more</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+						<img alt="" src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg">
+						
+							<svg class="bd-placeholder-img" width="100%" height="100%"
+								xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false"
+								role="img">
+								<rect width="100%" height="100%" fill="#777" /></svg>
+							<div class="container">
+								<div class="carousel-caption text-right">
+									<h1>One more for good measure.</h1>
+									<p>Bye</p>
+									<p>
+										<a class="btn btn-lg btn-primary" href="#" role="button">Browse
+											gallery</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#myCarousel" role="button"
+						data-slide="prev"> <span class="carousel-control-prev-icon"
+						aria-hidden="true"></span> <span class="sr-only">Previous</span>
+					</a> <a class="carousel-control-next" href="#myCarousel" role="button"
+						data-slide="next"> <span class="carousel-control-next-icon"
+						aria-hidden="true"></span> <span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-4"></div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

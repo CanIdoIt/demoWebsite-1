@@ -9,5 +9,18 @@ body {
   margin-bottom: 20px;
 }
 .box{
-	border: 1px solid red;
+	border: 1px;
 }
+
+.container {
+	width: 80%;
+	height: 30%;
+}
+hr{
+	border: none;
+	height:2px;
+	color: #333;
+	background-color:#333;
+}
+
+.section-headline{}

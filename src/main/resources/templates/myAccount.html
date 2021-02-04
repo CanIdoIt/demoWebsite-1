@@ -1,185 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header">
 
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<title>My Account</title>
-
-<!-- Bootstrap core CSS -->
-<link href="/css/bootstrap.min.css" rel="stylesheet" />
-
-<!-- Custom styles for this template -->
-<link href="/css/style.css" rel="stylesheet" />
 
 </head>
 
 <body>
-	<div class="page-top"
-		style="width: 100%; height: 20px; background-color: #f46b42"></div>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Logo</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-			<ul class="navbar-nav navbar-left">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/Menu">Takeaway Menu</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Contact
-						Us</a></li>
+	<div th:replace="common/header :: navbar" />
 
-				<!--  
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      -->
-				<!-- search field -->
-				<form class="navbar-form">
-					<div class="form-group">
-						<input type="text" name="keyword" class="form-control"
-							placeholder="Menu item" />
-					</div>
-					<button type="submit" class="btn btn-default">Search</button>
-				</form>
-
-			</ul>
-
-			<ul class="nav navbar-right">
-				<li><a href="#">SHOPPING CART |</a></li>
-				<li><a href="#"> MY ACCOUNT |</a></li>
-				<li><a href="#"> LOG OUT</a></li>
-			</ul>
-
+	<div class="container">
+	
+	<div class = "row">
+		<div class="col-xs-8">
+			<h2 class= "section-headline"><span>My Account</span></h2>
 		</div>
-	</nav>
-
-
-
-	My Account
-
-	<!-- nav tabs -->
-	<div class="row" style="margin-top: 120px;">
-		<div class="col-xs-9 col-xs-offset-3">
-			<ul class="nav nav-tabs">
-				<li><a href="#tab-1" data-toggle="tab"><span
-						style="color: red;">   Create new account   </span></a></li>
-				<li><a href="#tab-2" data-toggle="tab"><span
-						style="color: red;">   Log in   </span></a></li>
-				<li><a href="#tab-3" data-toggle="tab"><span
-						style="color: red;">   Forgot password   </span></a></li>
-			</ul>
-
-			<!-- tab panels -->
-			<div class="tab-content">
-			
-			<!-- create new user pane -->
-				<div class="tab-pane fade" id="tab-1">
-					<div class="panel-group">
-						<div class="panel panel-default" style="border: none;">
-							<div class="panel-body"
-								style="background-color: #ededed; margin-top: 20px;">
-								<form action="">
-
-									<div class="form-group">
-										<label for="newUsername">* Username:</label> <input
-											required="required" type="text" class="form-control"
-											id="newUsername" name="username" />
-										<p style="color: #828282">Enter your user name</p>
-									</div>
-
-									<div class="form-group">
-										<label for="email">* A valid email address: </label> 
-										<input required="required"
-											type="text" class="form-control" id="email" name="email" />
-										<p style="color: #828282">All emails
-											from the system will be sent to this address. The email
-											address is not made public and will only be used if you
-											wished to receive a new password or wish to receive certain notifications:</p>
-									</div>
-
-									<button type="submit" class="btn btn-primary">Create new account</button>
-								</form>
-							</div>
-						</div>
-					</div>
-					
-					<!-- Login -->
-					<div class="tab-pane fade" id="tab-2">
-					<div class="panel-group">
-						<div class="panel panel-default" style="border: none;">
-							<div class="panel-body"
-								style="background-color: #ededed; margin-top: 20px;">
-								<form action="">
-
-									<div class="form-group">
-										<label for="newUsername">* Username:</label> <input
-											required="required" type="text" class="form-control"
-											id="newUsername" name="username" />
-										<p style="color: #828282">Enter your user name</p>
-									</div>
-
-									<div class="form-group">
-										<label for="password">* Password: </label> 
-										<input required="required"
-											type="password" class="form-control" id="password" name="password" />
-										<p style="color: #828282">Enter the password that accompanies your username</p>
-									</div>
-
-									<button type="submit" class="btn btn-primary">Log in</button>
-								</form>
-							</div>
-						</div>
-					</div>
-					
-					<!-- forgot password -->
-					<div class="tab-pane fade" id="tab-3">
-					<div class="panel-group">
-						<div class="panel panel-default" style="border: none;">
-							<div class="panel-body"
-								style="background-color: #ededed; margin-top: 20px;">
-								<form action="">
-
-									<div class="form-group">
-										<label for="recoverEmail">* Your Email:</label> <input
-											required="required" type="text" class="form-control"
-											id="recoverEmail" name="email" />
-										<p style="color: #828282">Enter your registered email address here.</p>
-									</div>
-									<button type="submit" class="btn btn-primary">Submit</button>
-								</form>
-							</div>
-						</div>
-					</div>
-					
-				</div>
+		<div class="col-xs-4">
+				<img src="/images/scarab-logo.png" class="img-responsive" style="margin-top: 20px;"/>
 			</div>
-		</div>
 	</div>
+	
+		<!-- nav tabs -->
+		<div class="row" style="margin-top: 60px;">
+			<div class="col-xs-9 col-xs-offset-3">
+				<ul class="nav nav-tabs">
+					<li><a href="#tab-1" data-toggle="tab"><span
+								style="color: black;"> Create new account </span></a></li>
+								
+					<li><a href="#tab-2" data-toggle="tab"><span
+								style="color: black;"> Log in </span></a></li>
+								
+					<li><a href="#tab-3" data-toggle="tab"><span
+								style="color: black;"> Forgot password </span></a></li>
+				</ul>
+
+				<!-- tab panels -->
+				<div class="tab-content">
+
+					<!-- create new user pane -->
+					<div class="tab-pane fade" id="tab-1">
+						<div class="panel-group">
+							<div class="panel panel-default" style="border: none;">
+								<div class="panel-body"
+									style="background-color: #ededed; margin-top: 20px;">
+									<form action="">
+
+										<div class="form-group">
+											<label for="newUsername">* Username:</label> <input
+												required="required" type="text" class="form-control"
+												id="newUsername" name="username" />
+											<p style="color: #828282">Enter your user name</p>
+										</div>
+
+										<div class="form-group">
+											<label for="email">* A valid email address: </label> <input
+												required="required" type="text" class="form-control"
+												id="email" name="email" />
+											<p style="color: #828282">All emails from the system will
+												be sent to this address. The email address is not made
+												public and will only be used if you wished to receive a new
+												password or wish to receive certain notifications:</p>
+										</div>
+
+										<button type="submit" class="btn btn-primary">Create
+											new account</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+						<!-- Login -->
+						<div class="tab-pane fade" id="tab-2">
+							<div class="panel-group">
+								<div class="panel panel-default" style="border: none;">
+									<div class="panel-body"
+										style="background-color: #ededed; margin-top: 20px;">
+										<form action="">
+
+											<div class="form-group">
+												<label for="newUsername">* Username:</label> <input
+													required="required" type="text" class="form-control"
+													id="newUsername" name="username" />
+												<p style="color: #828282">Enter your user name</p>
+											</div>
+
+											<div class="form-group">
+												<label for="password">* Password: </label> <input
+													required="required" type="password" class="form-control"
+													id="password" name="password" />
+												<p style="color: #828282">Enter the password that
+													accompanies your username</p>
+											</div>
+
+											<button type="submit" class="btn btn-primary">Log in</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+							<!-- forgot password -->
+							<div class="tab-pane fade" id="tab-3">
+								<div class="panel-group">
+									<div class="panel panel-default" style="border: none;">
+										<div class="panel-body"
+											style="background-color: #ededed; margin-top: 20px;">
+											<form action="">
+
+												<div class="form-group">
+													<label for="recoverEmail">* Your Email:</label> <input
+														required="required" type="text" class="form-control"
+														id="recoverEmail" name="email" />
+													<p style="color: #828282">Enter your registered email
+														address here.</p>
+												</div>
+												<button type="submit" class="btn btn-primary">Submit</button>
+											</form>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							
+						</div>
+					</div>
+				</div>
 
 
+			</div>
+			
 
+		
+		<!-- end of container -->
+	
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-	<script src="/js/bootstrap.min.js"></script>
-
+	<div th:replace="common/header :: body-bottom-scripts" />
 </body>
 </html>

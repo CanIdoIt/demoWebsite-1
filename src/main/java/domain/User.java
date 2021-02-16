@@ -1,13 +1,25 @@
 package domain;
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import domain.security.Authority;
+import domain.security.UserRole;
+
 @Entity
-public class User {
+public class User implements UserDetails{
+	
+	UserRole userRoles;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -92,6 +104,35 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", userName=" + userName + ", password=" + password + ", firstName=" + firstName
 				+ ", LastName=" + LastName + ", email=" + email + ", phone=" + phone + ", enabled=" + enabled + "]";
+	}
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		Set<GrantedAuthority> authorities = new HashSet<>();
+		
+		 ((Iterable<? extends GrantedAuthority>) userRoles).forEach(ur -> authorities.add(new Authority(((UserRole) ur).getRole().getName())));
+		return authorities;
+	}
+
+
+	@Override
+	public boolean isAccountNonExpired() {
+		return false;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		return false;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return false;
+	}
+
+	@Override
+	public String getUsername() {
+		return userName;
 	}
 	
 	

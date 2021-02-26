@@ -27,5 +27,16 @@ public class HomeController {
 		model.addAttribute("classActiveLogin", true);
 		return "myAccount";
 	}
+	@RequestMapping("/forgetPassword")
+	public String forgetPassword(Model model) {
+		model.addAttribute("classActiveForgetPassword", true);
+		return "myAccount";
+	}
+	
+	@RequestMapping("/newUse")
+	public String newUser(Model model) {
+		model.addAttribute("classActiveNewUser", true);
+		return "myAccount";
+	}
 	
 }
